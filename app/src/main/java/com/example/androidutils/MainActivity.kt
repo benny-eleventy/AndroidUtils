@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
 // Set the image resource to the ImageView
         val first = findViewById<ImageView>(R.id.second)
         first.setImageResource(
-            com.example.androidcustomsymbols.R.drawable.annotation)
+            com.example.androidcustomsymbols.R.drawable.priorityhighest)
         // Set the color of the icon to green
-        first.setColorFilter(ContextCompat.getColor(this, R.color.green))
+//        first.setColorFilter(ContextCompat.getColor(this, R.color.green))
         // Set the image resource to the ImageView
         val second = findViewById<ImageView>(R.id.first)
-        second.setImageResource(R.drawable.outline_toggle_on_24)
+        second.setImageResource(com.example.androidcustomsymbols.R.drawable.playlist)
         // Set the color of the icon to green
         second.setColorFilter(ContextCompat.getColor(this, R.color.green))
 
