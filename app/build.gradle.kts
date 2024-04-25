@@ -55,7 +55,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidUtils)
-    //implementation(project(":AndroidCustomSymbols"))
+    //implementation(libs.androidUtils)
+    implementation(project(":AndroidCustomSymbols"))
 
 }
