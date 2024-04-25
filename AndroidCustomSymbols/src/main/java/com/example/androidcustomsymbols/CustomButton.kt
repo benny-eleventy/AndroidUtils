@@ -34,7 +34,7 @@ fun CustomButton(
     cornerRadius: Dp = 16.dp,
     contentPadding: PaddingValues = PaddingValues(8.dp),
     fontSize: TextUnit = 16.sp,
-    backgroundColor: Color , // Default to theme primary color
+    backgroundColor: Color ,
     contentColor: Color ,
     icon: String,
 ) {
