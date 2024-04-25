@@ -1,7 +1,6 @@
 
 package com.example.androidutils
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -45,12 +44,10 @@ fun CustomButton(
 
     Button(
         onClick = onClick,
-        modifier = modifier
-            .background(backgroundColor)
-            .then(modifier),
+        modifier = modifier,
         shape = RoundedCornerShape(cornerRadius),
         contentPadding = contentPadding,
-
+        colors = ButtonDefaults.buttonColors(backgroundColor = backgroundColor)
 
     ) {
         Row {

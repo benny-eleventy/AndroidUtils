@@ -3,6 +3,7 @@ package com.example.androidcustomsymbols
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,6 +24,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 
 
 @Composable
@@ -30,10 +32,13 @@ fun CustomButton(
 //    @DrawableRes imageResource: Int,
     label: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier, // Only pass modifier
+    modifier: Modifier = Modifier,
+    activeModifier: Modifier = Modifier,
     cornerRadius: Dp = 16.dp,
     contentPadding: PaddingValues = PaddingValues(8.dp),
     fontSize: TextUnit = 16.sp,
+    activeColor: Color,
+    isActive: Boolean,
     backgroundColor: Color ,
     contentColor: Color ,
     icon: String,
@@ -45,15 +50,17 @@ fun CustomButton(
 
     Button(
         onClick = onClick,
-        modifier = modifier
-            .background(backgroundColor)
-            .then(modifier),
+        modifier = modifier,
         shape = RoundedCornerShape(cornerRadius),
         contentPadding = contentPadding,
-
+        colors = ButtonDefaults.buttonColors(backgroundColor = if (isActive) activeColor else backgroundColor) // Set the containerColor here
 
     ) {
-        Row {
+        Row(
+
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
             Icon(
                 painter = painterResource(id = imageResource),
                 contentDescription = label,
