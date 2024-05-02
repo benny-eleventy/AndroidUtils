@@ -77,7 +77,7 @@ class MainActivity : ComponentActivity() {
 //                            isActive = false,
 //                        )
                         CustomIcon(
-                            icon = IconNames.note,
+                            icon = IconNames.lighteningBolt,
                             type="thin",
                             style = IconStyle(Color.Blue, Color.Transparent,  48f),
                             id = "Icon"

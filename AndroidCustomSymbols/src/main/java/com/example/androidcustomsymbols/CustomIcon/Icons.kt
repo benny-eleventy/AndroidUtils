@@ -11,17 +11,18 @@ import androidx.compose.material.icons.outlined.ArrowForward
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.vectorResource
 import com.example.androidcustomsymbols.R
 
 enum class IconNames(val icon: String) {
+
     arrowForward("arrow_forward"),
     settings("settings"),
     home("home"),
-
     lighteningBolt("bolt"),
-    bubbles("bubbles");
-
+    bubbles("bubbles"),
+    stickyNote("stickyNote");
 
     @Composable
     fun getIcon(type: String): ImageVector {
@@ -54,6 +55,14 @@ enum class IconNames(val icon: String) {
                 "ultralight" -> ImageVector.vectorResource(id = R.drawable.bubbles_ultralight)
                 "light" -> ImageVector.vectorResource(id = R.drawable.bubbles_light)
                 "regular" -> ImageVector.vectorResource(id = R.drawable.bubbles_regular)
+                else -> Icons.Default.Settings
+            }
+
+            stickyNote -> when (type) {
+                "thin" -> ImageVector.vectorResource(id = R.drawable.sticky_note_thin)
+                "ultralight" -> ImageVector.vectorResource(id = R.drawable.sticky_note_ultralight)
+                "light" -> ImageVector.vectorResource(id = R.drawable.sticky_note_light)
+                "regular" -> ImageVector.vectorResource(id = R.drawable.sticky_note_regular)
                 else -> Icons.Default.Settings
             }
         }
