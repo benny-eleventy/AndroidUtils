@@ -58,13 +58,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.compose.material.icons.extended )
 }
 
 afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
-                groupId = "com.github.bennyy-eleventy"
+                groupId = "com.github.benny-eleventy"
                 artifactId = "AndroidCustomSymbols"
                 version = "1.0"
 
